@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "com.byneapp.flutter_config"
+    namespace "com.github.ismartjs.flutter_config"
     compileSdkVersion 35
 
     sourceSets {
@@ -33,10 +33,21 @@ android {
     }
     defaultConfig {
         minSdkVersion 16
+        targetSdkVersion 35
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+    // เพิ่มส่วนนี้
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    // เพิ่มส่วนนี้ด้วย
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
