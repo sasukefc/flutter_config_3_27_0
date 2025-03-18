@@ -25,9 +25,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "com.github.ismartjs.flutter_config"
+    namespace "com.github.ismartjs.flutter_config" // เพิ่มส่วนนี้
     compileSdkVersion 35
-
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -39,6 +38,7 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+    
     // เพิ่มส่วนนี้
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
