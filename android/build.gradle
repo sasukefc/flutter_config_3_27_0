@@ -25,33 +25,30 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "com.github.ismartjs.flutter_config"
+    namespace "com.github.ismartjs.flutter_config" // เพิ่มส่วนนี้
     compileSdkVersion 35
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 35
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
         disable 'InvalidPackage'
     }
     
-    // ใช้ Java 17
+    // เพิ่มส่วนนี้
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    // ใช้ Kotlin 1.7 หรือ 1.8 (ตามต้องการ)
+    
+    // เพิ่มส่วนนี้ด้วย
     kotlinOptions {
-        jvmTarget = '17' // ตรงกับการตั้งค่า Java
+        jvmTarget = '1.8'
     }
 }
-
-
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
